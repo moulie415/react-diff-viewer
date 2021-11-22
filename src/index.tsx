@@ -524,7 +524,7 @@ class DiffViewer extends React.Component<
 					const { length } = skippedLines;
 					skippedLines = [];
 					return (
-						<React.Fragment key={i}>
+						<div onClick={() => alert('test')} key={i}>
 							{this.renderSkippedLineIndicator(
 								length,
 								diffBlockStart,
@@ -532,7 +532,7 @@ class DiffViewer extends React.Component<
 								line.right.lineNumber,
 							)}
 							{diffNodes}
-						</React.Fragment>
+						</div>
 					);
 				}
 				return diffNodes;
